@@ -1,14 +1,6 @@
 import random
 
-def get_guess():
 
-    userinput = (input("enter a number between 1 and 100: "))
-
-    while not userinput.isdigit() or not (1<= int(userinput) <=100): #makes sure userinput is a digit and within 1 and 100
-        print("invalid input, try again")
-        userinput = (input("enter a number between 1 and 100: "))
-
-    return int(userinput)
 
 def get_difficulty(): #makes sure the user enters a correct difficulty level
 
@@ -19,6 +11,18 @@ def get_difficulty(): #makes sure the user enters a correct difficulty level
         level = input("Enter 'Easy', 'Medium', or 'Hard' mode: ").lower()
 
     return level
+
+
+def get_guess():
+
+    userinput = (input("enter a number between 1 and 100: "))
+
+    while not userinput.isdigit() or not (1<= int(userinput) <=100): #makes sure userinput is a digit and within 1 and 100
+        print("invalid input, try again")
+        userinput = (input("enter a number between 1 and 100: "))
+
+    return int(userinput)
+
 
 def game():
 
