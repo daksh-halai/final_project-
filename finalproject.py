@@ -65,6 +65,20 @@ def game():
 def main():
     game()
 
+    replay = input("do you want to play again, enter yes or no: ").lower()
+
+    while replay not in ["yes", "no"]: #validating replay
+        print("invalid input, try again")
+        replay = input("do you want to play again, enter yes or no: ").lower()
+
+    while replay == "yes":
+        game()
+        replay = input("do you want to play again, enter yes or no: ").lower()
+        while replay not in ["yes", "no"]:
+            print("invalid input, try again")
+            replay = input("do you want to play again, enter yes or no: ").lower()
+        
+
 
 if __name__ == "__main__":
     main()
